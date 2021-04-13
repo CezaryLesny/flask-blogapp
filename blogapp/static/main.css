@@ -30,6 +30,8 @@ body {
     border: 1px solid #dddddd;
     border-radius: 3px;
     margin-bottom: 20px;
+    white-space: normal !important;
+    word-wrap: break-word;
   }
   
   .article-title {
@@ -42,7 +44,8 @@ body {
   }
   
   .article-content {
-    white-space: pre-line;
+    white-space: normal !important;
+    word-wrap: break-word;
   }
   
   .article-img {
@@ -78,3 +81,8 @@ body {
   .account-heading {
     font-size: 2.5rem;
   }
+
+  .break-word {
+    white-space: normal !important;
+    word-wrap: break-word;
+ }
