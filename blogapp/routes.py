@@ -44,7 +44,7 @@ def login():
             next_page = request.args.get('next')
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
-            flash('Logowanie nieudane. Sprawdź czy email i hasło zostało wpisane prawidłowo')
+            flash('Logowanie nieudane. Sprawdź czy email i hasło zostało wpisane prawidłowo.', 'danger')
     return render_template('login.html', title='Login', form=form)
 
 @app.route('/logout')
@@ -56,7 +56,7 @@ def save_picture(form_picture):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_picture.filename)
     picture_fn = random_hex + f_ext
-    picture_path = os.path.join(app.root_path, 'static/profile_pics', 'picture_fn')
+    picture_path = os.path.join(app.root_path, 'static/profile_pics', picture_fn)
 
     output_size = (125, 125)
     i = Image.open(form_picture)

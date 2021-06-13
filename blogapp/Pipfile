@@ -9,9 +9,9 @@ verify_ssl = true
 flask = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
-
 gunicorn = "*"
 email-validator = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8.5"
